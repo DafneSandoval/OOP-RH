@@ -14,18 +14,18 @@ public class Employee {
 	// IMPLEMENT METHODS 
 	   public int timeToRetirement(){
 		      int retirementAge = 60;
-		      int yearsWorked = 40;
+		      return retirementAge - age;
+		     // int yearsWorked = 40;
 		   }
 
 		   public int vacationTimeLeft(){
-		       int daysWorked =360 * 30 - vacationDaysTaken;
+		       int vacationDaysleft = (int) ((daysWorked /360)* (30 - vacationDaysTaken));
+			return Math.max(0, vacationDaysleft); //Poner el 0 asegura que el resultado nunca sea menor a 0
 		   }
 
-		   public int calculateBonus(){
-		      int bonus = 2.2*salary;
+		   public double calculateBonus(){
+		      double bonus = 2.2*salary;
+			return bonus;
 		   }
 	//Methods
-	
-	 
-
 } // class Employee
